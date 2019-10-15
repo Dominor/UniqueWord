@@ -1,15 +1,13 @@
 package org.academiadecodigo.splicegirls36.uniqueword;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 public class UniqueWord implements Iterable<String> {
 
-    private HashSet<String> words;
+    private Set<String> words;
 
     public UniqueWord(String string) {
-        this.words = new HashSet<>(Arrays.asList(string.split(" ")));
+        Collections.addAll(this.words = new HashSet<>(), string.split(" "));
     }
 
     @Override
